@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jaxrpc-api-1.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/javax.xml.jaxrpc-api.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/com.oracle.webservices.wls.jaxrpc-client.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-lang3-3.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
