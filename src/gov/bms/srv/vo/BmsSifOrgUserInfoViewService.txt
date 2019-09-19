@@ -1,0 +1,888 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WL5G3N0:definitions targetNamespace="http://hamoni.mogaha.go.kr/bms" xmlns="" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://hamoni.mogaha.go.kr/bms" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="java:gov.bms.srv.vo" xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:stns="java:gov.bms.srv.vo" xmlns:tns="http://hamoni.mogaha.go.kr/bms" xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <s:complexType name="ArrayOfBmsSrvAuthPairVO">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="BmsSrvAuthPairVO" nillable="true" type="stns:BmsSrvAuthPairVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsSrvAuthPairVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="type" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="value" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsSrvAuthVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="card" nillable="true" type="stns:ArrayOfBmsSrvAuthPairVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="chief" nillable="true" type="stns:ArrayOfBmsSrvAuthPairVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="org" nillable="true" type="stns:ArrayOfBmsSrvAuthPairVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="role" nillable="true" type="stns:ArrayOfBmsSrvAuthPairVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="user" nillable="true" type="stns:ArrayOfBmsSrvAuthPairVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="java:gov.bms.lnk.ini.vo" xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:stns="java:gov.bms.lnk.ini.vo" xmlns:tns="http://hamoni.mogaha.go.kr/bms" xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <s:import namespace="java:gov.bms.srv.vo">
+   </s:import>
+      <s:complexType name="ArrayOfBmsLnkIniOrgSrvAuthListVO">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="BmsLnkIniOrgSrvAuthListVO" nillable="true" type="stns:BmsLnkIniOrgSrvAuthListVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBmsLnkIniOrgUserInfoAuthListVO">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="BmsLnkIniOrgUserInfoAuthListVO" nillable="true" type="stns:BmsLnkIniOrgUserInfoAuthListVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBmsLnkIniOrgUserInfoList3VO">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="BmsLnkIniOrgUserInfoList3VO" nillable="true" type="stns:BmsLnkIniOrgUserInfoList3VO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBmsLnkIniOrgUserInfoListVO">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="BmsLnkIniOrgUserInfoListVO" nillable="true" type="stns:BmsLnkIniOrgUserInfoListVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniCommonResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="errConts" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="recptDthms" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="recptRsltCd" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniLoginVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="authKey" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptCd" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="systemId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgAuthedUserYNViewReqVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginVo" nillable="true" type="stns:BmsLnkIniLoginVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgSrvAuthClient2Vo" nillable="true" type="stns:BmsLnkIniOrgSrvAuthClient2VO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgAuthedUserYNViewResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgSrvAuthResultVo" nillable="true" type="stns:BmsLnkIniOrgSrvAuthResultVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgObjAuthListViewReqVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginVo" nillable="true" type="stns:BmsLnkIniLoginVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgObjAuthListViewResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="bmsLnkIniOrgObjAuthListViewPairVO" nillable="true" type="tp:BmsSrvAuthVO" xmlns:tp="java:gov.bms.srv.vo">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgSrvAuthClient2VO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginPwd" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="reqIp" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgSrvAuthListVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="VGroupId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="VGroupName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userName" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgSrvAuthResultVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgSrvAuthVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="orgSrvAuthListVos" nillable="true" type="stns:ArrayOfBmsLnkIniOrgSrvAuthListVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgSrvSendUserInfoClient2VO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="orgId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="reqIp" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="reqNum" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="systemCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgSrvUserInfoClient2VO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="gubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="reqNum" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="systemCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="systemIp" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userName" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserAuthInfoLViewReqVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginVo" nillable="true" type="stns:BmsLnkIniLoginVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgSrvSendUserInfoClient2Vo" nillable="true" type="stns:BmsLnkIniOrgSrvSendUserInfoClient2VO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserAuthInfoLViewResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgSrvAuthVo" nillable="true" type="stns:BmsLnkIniOrgSrvAuthVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserByUIDSrvVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserByUIDViewReqVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginVo" nillable="true" type="stns:BmsLnkIniLoginVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserByUIDViewResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserLoginIdSrvVo" nillable="true" type="stns:BmsLnkIniOrgUserByUIDSrvVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserIdViewReqVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginVo" nillable="true" type="stns:BmsLnkIniLoginVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserIdViewResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserSrvVo" nillable="true" type="stns:BmsLnkIniOrgUserSrvVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfo3VO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="approvalPassword" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="classCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="email" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="fileId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="fileName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="grade" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeShortName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePage" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="imGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isConcurrent" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isDeleted" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobType" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="mobilePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeFax" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserInfoListVos" nillable="true" type="stns:ArrayOfBmsLnkIniOrgUserInfoList3VO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="password" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="position" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="positionDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="residentNo" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="totCnt" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userOrder" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoAuthListVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="VGroupId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="VGroupName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoList3VO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="approvalPassword" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="classCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="className" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="duty" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="email" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="fileId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="fileName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="grade" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeShortName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePage" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="imGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="imGubunName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isConcurrent" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isDeleted" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobGubunName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobType" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobTypeName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="mobilePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeFax" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserInfoAuthListVos" nillable="true" type="stns:ArrayOfBmsLnkIniOrgUserInfoAuthListVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="password" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="position" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="positionDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="positionName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="residentNo" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="totCnt" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userActGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userOrder" type="xsd:int">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoListVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="approvalPassword" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="classCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="className" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="duty" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="email" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="grade" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeShortName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePage" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="imGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="imGubunName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isConcurrent" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isDeleted" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobGubunName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobType" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobTypeName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="mobilePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeFax" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserInfoAuthListVos" nillable="true" type="stns:ArrayOfBmsLnkIniOrgUserInfoAuthListVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="password" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="position" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="positionDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="positionName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="residentNo" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="totCnt" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userOrder" type="xsd:int">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="approvalPassword" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="classCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="deptName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="email" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="fileId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="grade" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="gradeShortName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePage" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="homeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="imGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="inId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isConcurrent" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="isDeleted" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobGubun" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="jobType" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="loginId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="mobilePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddr" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeAddrDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeFax" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officePhone" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="officeZip" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserInfoListVos" nillable="true" type="stns:ArrayOfBmsLnkIniOrgUserInfoListVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="password" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="position" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="positionDetail" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="residentNo" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="totCnt" type="xsd:int">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upDt" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="upId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userOrder" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoViewReqVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="loginVo" nillable="true" type="stns:BmsLnkIniLoginVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgSrvUserInfoClient2Vo" nillable="true" type="stns:BmsLnkIniOrgSrvUserInfoClient2VO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoViewRes3VO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserInfoVo" nillable="true" type="stns:BmsLnkIniOrgUserInfo3VO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserInfoViewResVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="commonResVo" nillable="true" type="stns:BmsLnkIniCommonResVO">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="orgUserInfoVo" nillable="true" type="stns:BmsLnkIniOrgUserInfoVO">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BmsLnkIniOrgUserSrvVO">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultCode" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="actResultName" nillable="true" type="xsd:string">
+     </s:element>
+          <s:element maxOccurs="1" minOccurs="1" name="userId" nillable="true" type="xsd:string">
+     </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://hamoni.mogaha.go.kr/bms" xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:stns="http://hamoni.mogaha.go.kr/bms" xmlns:tns="http://hamoni.mogaha.go.kr/bms" xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <s:import namespace="java:gov.bms.lnk.ini.vo">
+   </s:import>
+      <s:element name="getAuthedUserYNView" nillable="true" type="tp:BmsLnkIniOrgAuthedUserYNViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getAuthedUserYNViewResponse" nillable="true" type="tp:BmsLnkIniOrgAuthedUserYNViewResVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getObjAuthListView" nillable="true" type="tp:BmsLnkIniOrgObjAuthListViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getObjAuthListViewResponse" nillable="true" type="tp:BmsLnkIniOrgObjAuthListViewResVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserAuthInfoListView" nillable="true" type="tp:BmsLnkIniOrgUserAuthInfoLViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserAuthInfoListViewResponse" nillable="true" type="tp:BmsLnkIniOrgUserAuthInfoLViewResVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserByUIDView" nillable="true" type="tp:BmsLnkIniOrgUserByUIDViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserByUIDViewResponse" nillable="true" type="tp:BmsLnkIniOrgUserByUIDViewResVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserIdView" nillable="true" type="tp:BmsLnkIniOrgUserIdViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserIdViewResponse" nillable="true" type="tp:BmsLnkIniOrgUserIdViewResVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserInfoView" nillable="true" type="tp:BmsLnkIniOrgUserInfoViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserInfoViewResponse" nillable="true" type="tp:BmsLnkIniOrgUserInfoViewResVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserModInfoListView" nillable="true" type="tp:BmsLnkIniOrgUserInfoViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserModInfoListViewLite" nillable="true" type="tp:BmsLnkIniOrgUserInfoViewReqVO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserModInfoListViewLiteResponse" nillable="true" type="tp:BmsLnkIniOrgUserInfoViewRes3VO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="getUserModInfoListViewResponse" nillable="true" type="tp:BmsLnkIniOrgUserInfoViewRes3VO" xmlns:tp="java:gov.bms.lnk.ini.vo">
+   </s:element>
+      <s:element name="isAliveResponse" type="xsd:boolean">
+   </s:element>
+    </s:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="isAlive"/>
+  <WL5G3N0:message name="isAliveResponse">
+    <WL5G3N0:part element="WL5G3N1:isAliveResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAuthedUserYNView">
+    <WL5G3N0:part element="WL5G3N1:getAuthedUserYNView" name="bmsLnkIniOrgAuthedUserYNViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAuthedUserYNViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getAuthedUserYNViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getObjAuthListView">
+    <WL5G3N0:part element="WL5G3N1:getObjAuthListView" name="bmsLnkIniOrgObjAuthListViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getObjAuthListViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getObjAuthListViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserAuthInfoListView">
+    <WL5G3N0:part element="WL5G3N1:getUserAuthInfoListView" name="bmsLnkIniOrgUserAuthInfoLViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserAuthInfoListViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getUserAuthInfoListViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserByUIDView">
+    <WL5G3N0:part element="WL5G3N1:getUserByUIDView" name="bmsLnkIniOrgUserByUIDViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserByUIDViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getUserByUIDViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserIdView">
+    <WL5G3N0:part element="WL5G3N1:getUserIdView" name="bmsLnkIniOrgUserIdViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserIdViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getUserIdViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserModInfoListView">
+    <WL5G3N0:part element="WL5G3N1:getUserModInfoListView" name="bmsLnkIniOrgUserInfoViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserModInfoListViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getUserModInfoListViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserModInfoListViewLite">
+    <WL5G3N0:part element="WL5G3N1:getUserModInfoListViewLite" name="bmsLnkIniOrgUserInfoViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserModInfoListViewLiteResponse">
+    <WL5G3N0:part element="WL5G3N1:getUserModInfoListViewLiteResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserInfoView">
+    <WL5G3N0:part element="WL5G3N1:getUserInfoView" name="bmsLnkIniOrgUserInfoViewReqVO"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getUserInfoViewResponse">
+    <WL5G3N0:part element="WL5G3N1:getUserInfoViewResponse" name="result"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="BmsSifOrgUserInfoViewService_V5Port">
+    <WL5G3N0:operation name="isAlive">
+      <WL5G3N0:input message="WL5G3N1:isAlive"/>
+      <WL5G3N0:output message="WL5G3N1:isAliveResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAuthedUserYNView">
+      <WL5G3N0:input message="WL5G3N1:getAuthedUserYNView"/>
+      <WL5G3N0:output message="WL5G3N1:getAuthedUserYNViewResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getObjAuthListView">
+      <WL5G3N0:input message="WL5G3N1:getObjAuthListView"/>
+      <WL5G3N0:output message="WL5G3N1:getObjAuthListViewResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserAuthInfoListView">
+      <WL5G3N0:input message="WL5G3N1:getUserAuthInfoListView"/>
+      <WL5G3N0:output message="WL5G3N1:getUserAuthInfoListViewResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserByUIDView">
+      <WL5G3N0:input message="WL5G3N1:getUserByUIDView"/>
+      <WL5G3N0:output message="WL5G3N1:getUserByUIDViewResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserIdView">
+      <WL5G3N0:input message="WL5G3N1:getUserIdView"/>
+      <WL5G3N0:output message="WL5G3N1:getUserIdViewResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserModInfoListView">
+      <WL5G3N0:input message="WL5G3N1:getUserModInfoListView"/>
+      <WL5G3N0:output message="WL5G3N1:getUserModInfoListViewResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserModInfoListViewLite">
+      <WL5G3N0:input message="WL5G3N1:getUserModInfoListViewLite"/>
+      <WL5G3N0:output message="WL5G3N1:getUserModInfoListViewLiteResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserInfoView">
+      <WL5G3N0:input message="WL5G3N1:getUserInfoView"/>
+      <WL5G3N0:output message="WL5G3N1:getUserInfoViewResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="BmsSifOrgUserInfoViewService_V5Port" type="WL5G3N1:BmsSifOrgUserInfoViewService_V5Port">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="isAlive">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAuthedUserYNView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getObjAuthListView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserAuthInfoListView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserByUIDView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserIdView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserModInfoListView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserModInfoListViewLite">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getUserInfoView">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="BmsSifOrgUserInfoViewService_V5">
+    <WL5G3N0:port binding="WL5G3N1:BmsSifOrgUserInfoViewService_V5Port" name="BmsSifOrgUserInfoViewService_V5Port">
+      <WL5G3N2:address location="http://109.2.1.146:80/bms/service/BmsSifOrgUserInfoViewService_V5"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

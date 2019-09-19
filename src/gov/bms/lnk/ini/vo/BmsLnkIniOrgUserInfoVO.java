@@ -3,6 +3,9 @@
  */
 package gov.bms.lnk.ini.vo;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class BmsLnkIniOrgUserInfoVO implements java.io.Serializable {
 
   private java.lang.String actResultCode;
@@ -415,4 +418,8 @@ public class BmsLnkIniOrgUserInfoVO implements java.io.Serializable {
     this.userOrder = userOrder;
   }
 
+    @Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+	}
 }
